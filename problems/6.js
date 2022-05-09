@@ -7,7 +7,11 @@
  * @example [1, 2, 3] -> 6
 */
 function problem(numbers) {
-    return null;
+    let sum = 0
+    for(const num of numbers){
+        sum = sum + parseInt(num)
+    }
+    return sum
 }
 
 const tests = [

@@ -7,7 +7,18 @@
  * @example "abcdef" -> "ABCdef"
 */
 function problem(str) {
-    return null;
+    let mod = (str.length)/2;
+    if (str.length % 2 == 0){
+        fh = str.substr(0 , (mod))
+        sh = str.substr(mod, (str.length -1))
+        return (fh.toUpperCase() + sh.toLowerCase())
+    }
+    else{
+        fh = str.substr(0 , (mod))
+        mid = str.charAt(mod)
+        sh = str.substr(mod + 1, (str.length -1))
+        return (fh.toUpperCase() + mid.toLowerCase()+ sh.toLowerCase())
+    }
 }
 
 const tests = [

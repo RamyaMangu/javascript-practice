@@ -8,7 +8,31 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    let i = 0
+    str = str.replace(/\s+/g, '')
+    str = str.toLowerCase()
+    let j = str.length -1
+    while(true){
+        if(str.charAt(i) == str.charAt(j)){
+            i = i +1
+            j = j- 1
+        }
+        else{
+            return false
+        }
+        if (str.length % 2 == 0){
+            if((i+1) == j)
+            {
+                return true
+            }
+        }
+        else{
+            if(i == j)
+            {
+                return true
+            }
+        }
+    }
 }
 
 const tests = [

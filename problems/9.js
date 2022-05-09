@@ -7,7 +7,17 @@
  * @example [{name: "Chase", grade: 89}, {name: "Raman", grade: 92}, {name: "Peter", grade: 100}] -> ["Peter", "Raman"]
 */
 function problem(students) {
-    return null;
+    const grades = students.filter(function(item){
+        return item.grade > 90;
+    })
+    grades.sort((a, b) => {
+        // .localeCompare helps us compare two strings
+        return a.name.toLowerCase().localeCompare(b.name.toLowerCase());  
+    });
+    const sort = grades.map(function(item){
+        return item.name;
+    })
+    return sort
 }
 
 const tests = [
